@@ -5,9 +5,13 @@ Please find below services which we are going to use in AWS.
 
 
 VPC
-Subnet 
+
+Subnet
+
 Internet Gateway
-Route53 table 
+
+Route53 table
+
 Security Group 
 
 # 3 tier Architecture
