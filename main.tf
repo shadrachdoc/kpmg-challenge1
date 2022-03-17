@@ -37,7 +37,7 @@ resource "aws_subnet" "application-subnet-1" {
   map_public_ip_on_launch = false
 
   tags = {
-    Name = "Application-1a"
+    Name = var.application-subnet-1
   }
 }
 
@@ -48,7 +48,7 @@ resource "aws_subnet" "application-subnet-2" {
   map_public_ip_on_launch = false
 
   tags = {
-    Name = "Application-2b"
+    Name = var.application-subnet-2
   }
 }
 
@@ -59,7 +59,7 @@ resource "aws_subnet" "database-subnet-1" {
   availability_zone = "us-east-1a"
 
   tags = {
-    Name = "Database-1a"
+    Name = var.database-subnet-1
   }
 }
 
@@ -69,7 +69,7 @@ resource "aws_subnet" "database-subnet-2" {
   availability_zone = "us-east-1b"
 
   tags = {
-    Name = "Database-2b"
+    Name = var.database-subnet-2
   }
 }
 
@@ -78,7 +78,7 @@ resource "aws_internet_gateway" "igw" {
   vpc_id = aws_vpc.my-vpc.id
 
   tags = {
-    Name = "Demo IGW"
+    Name = var.igw
   }
 }
 
@@ -93,7 +93,7 @@ resource "aws_route_table" "web-rt" {
   }
 
   tags = {
-    Name = "WebRT"
+    Name = var.web-rt
   }
 }
 
